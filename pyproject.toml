@@ -51,11 +51,11 @@ dev = [
 "Homepage" = "https://github.com/NaturalAntibody/BALM"
 
 [tool.setuptools]
-py-modules = ["modeling_balm", "ba_position_embedding"]
+packages = ["balm", "balm.tokenizer"]
 include-package-data = true
 
 [tool.setuptools.package-data]
-"*" = ["tokenizer/*.txt"]
+"balm.tokenizer" = ["*.txt"]
 
 [tool.black]
 line-length = 100
