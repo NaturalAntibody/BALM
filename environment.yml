@@ -5,7 +5,6 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - anarci=2021.02.04=pyhdfd78af_0
   - numpy=1.21.5=py39he7a7128_1
   - pandas=1.4.2=py39h295c915_0
   - pip=21.2.4=py39h06a4308_0

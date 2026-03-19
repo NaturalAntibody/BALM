@@ -1,7 +1,6 @@
 from .modeling_balm import BALMForMaskedLM
-from .ba_position_embedding import get_anarci_pos
 
-__all__ = ["BALMForMaskedLM", "get_anarci_pos"]
+__all__ = ["BALMForMaskedLM"]
 
 def get_vocab_path():
     """Returns the absolute path to the bundled vocab.txt file."""
