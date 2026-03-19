@@ -38,6 +38,7 @@ dependencies = [
     "huggingface-hub>=0.11.1",
     "transformers (>=4.57.3,<5.0.0)",
     "anarci>=0.2.2",
+    "hmmer",
 ]
 
 [project.optional-dependencies]
