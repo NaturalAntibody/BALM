@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balm"
+version = "0.1.0"
+description = "Bio-Inspired Antibody Language Model (BALM) for Accurate Prediction of Antibody Function and Structure"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Hongtai Jing" },
+    { name = "Zhengtao Gao" },
+    { name = "Sheng Xu" },
+    { name = "Tao Shen" },
+    { name = "Zhangzhi Peng" },
+    { name = "Shwai He" },
+    { name = "Tao You" },
+    { name = "Shuang Ye" },
+    { name = "Wei Lin" },
+    { name = "Siqi Sun" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.21.5",
+    "pandas>=1.4.2",
+    "torch>=1.12.1",
+    "datasets>=2.4.0",
+    "huggingface-hub>=0.11.1",
+    "transformers (>=4.57.3,<5.0.0)",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "flake8",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/NaturalAntibody/BALM"
+
+[tool.setuptools]
+packages = ["balm", "balm.tokenizer"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"balm.tokenizer" = ["*.txt"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 100

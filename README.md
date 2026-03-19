@@ -14,15 +14,14 @@ The pre-trained weights of BALM can be downloaded from Google Drive link: [pretr
 ## Run inference
 
 ```
-from modeling_balm import BALMForMaskedLM
-from ba_position_embedding import get_anarci_pos
+from balm import BALMForMaskedLM, get_anarci_pos, get_vocab_path
 from transformers import EsmTokenizer
 import torch
 
 # an antibody sequence example
 input_seq = "AVQLQESGGGLVQAGGSLRLSCTVSARTSSSHDMGWFRQAPGKEREFVAAISWSGGTTNYVDSVKGRFDISKDNAKNAVYLQMNSLKPEDTAVYYCAAKWRPLRYSDNPSNSDYNYWGQGTQVTVSS"
 
-tokenizer = EsmTokenizer.from_pretrained("./tokenizer/vocab.txt", do_lower_case=False, model_max_length=168)
+tokenizer = EsmTokenizer.from_pretrained(get_vocab_path(), do_lower_case=False, model_max_length=168)
 
 tokenizer_input = tokenizer(input_seq, truncation=True, padding="max_length", return_tensors="pt")
 # generate position_ids
